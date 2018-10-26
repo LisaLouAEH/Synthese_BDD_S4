@@ -1,0 +1,2 @@
+class Plouk < ApplicationRecord
+end
