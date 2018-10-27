@@ -13,32 +13,32 @@
 
 ``` class Truc < ActiveRecord::Base ```  
 
-  C'est une "**instance**" de class propre a la librairie de rails qui s'appelle **ActiveRecord** et qui **hérite** de touuuuuute ses **methodes** pour communiquer en **SQL** avec la **base de donnée**.  
-  Ce qui signifie que quand on saisie des paramèttres dans notre méthode 'create_table'(db/migrates/) par exemple, ces paramèttres vont être **traduit par les attribut de ActiveRecord** en langage **SQL**(apparement les bases de données ne comprènenent pas les clicks droits) et aprés, magie, on va lire dans des forums "Rails c'est trop bien, on peux dialoguer avec les BDD sans une seule ligne de SQL". Et ben en fait, des lignes SQL, il y en a, même plein, sauf que c'est pas nous qui les codons.  C'est le framework* Rails 
+C'est une "**instance**" de class propre a la librairie de rails qui s'appelle **ActiveRecord** et qui **hérite** de touuuuuute ses **methodes** pour communiquer en **SQL** avec la **base de donnée**.  
+Ce qui signifie que quand on saisie des paramèttres dans notre méthode 'create_table'(db/migrates/) par exemple, ces paramèttres vont être **traduit par les attribut de ActiveRecord** en langage **SQL**(apparement les bases de données ne comprènenent pas les clicks droits) et aprés, magie, on va lire dans des forums "Rails c'est trop bien, on peux dialoguer avec les BDD sans une seule ligne de SQL". Et ben en fait, des lignes SQL, il y en a, même plein, sauf que c'est pas nous qui les codons.  C'est le framework* Rails 
 
 * Une **migration** ca sert à quoi ?  
 
-  Ca sert à envoyer des instructions structurales (qui modifient sa structure) à la base de donnée. Par exemple "**supprimer une table**" c'est une instruction qui modifie la structure de la BDD puisqu'on lui retire un élément.  
-  J'aime bien me représenter le fonctionnement des migrations comme des lettres que j'enverais à un chef de chantier si j'étais une riche propriétaire de plusieurs complexes hoteliers.  
+Ca sert à envoyer des instructions structurales (qui modifient sa structure) à la base de donnée. Par exemple "**supprimer une table**" c'est une instruction qui modifie la structure de la BDD puisqu'on lui retire un élément.  
+J'aime bien me représenter le fonctionnement des migrations comme des lettres que j'enverais à un chef de chantier si j'étais une riche propriétaire de plusieurs complexes hoteliers.  
   ```rails g migration create_hostel_tahiti  ```  
     
    Comme je ne sais pas parler tahitien, j'engage un traducteur qui s'appelle 'Activo-recordo' pour traduire la lettre suivante :
 
 ```
-  create_hostel :bora_bora
+ create_hostel :bora_bora
     --> Je veux 1 piscine , de type 'a debordement', options : jacuzzi
   end
 ```  
   
-  Evidement le chef de chantier pendant que je lui écrit, il est au courant de rien. Il me faut a présent poster mon courrier :  
+Evidement le chef de chantier pendant que je lui écrit, il est au courant de rien. Il me faut a présent poster mon courrier :  
     
   ```rails db:migrate```  
     
-  C'est un courrier super sonique, il arrive trés vite, et le chantier commence aussitot.  
-  En fait j'ai changé d'avis, je veux aussi un espace de meditation pour chien dans mon hotel parceque mon detestable chiwawa, dont je ne m'occupe même pas, n'aurait pas les chakras allignés en ce moment. J'en profiterais bien pour l'emmener en vacance. Zut le courrier traduit est déja parti !!
-  Pas de panique ! On va quand même pas **detruire l'hotel entier** à cause de cela. Il me suffit d'envoyer un autre courrier super sonique avec mes nouvelles instructions :  
+C'est un courrier super sonique, il arrive trés vite, et le chantier commence aussitot.  
+En fait j'ai changé d'avis, je veux aussi un espace de meditation pour chien dans mon hotel parceque mon detestable chiwawa, dont je ne m'occupe même pas, n'aurait pas les chakras allignés en ce moment. J'en profiterais bien pour l'emmener en vacance. Zut le courrier traduit est déja parti !!
+Pas de panique ! On va quand même pas **detruire l'hotel entier** à cause de cela. Il me suffit d'envoyer un autre courrier super sonique avec mes nouvelles instructions :  
   ```rails g migration add_place_dog_meditation```  
-  etc..
+etc..
 
 ## Quelques méthodes pratico-gogo de migration
 
