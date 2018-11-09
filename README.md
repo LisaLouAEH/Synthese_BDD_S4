@@ -9,24 +9,25 @@
   Intuitivement on se dirige vers notre éditeur préféré (celui qui mets des couleurs partout dans notre code), click droit, effacer le fichier de migration qui contient la trace de notre table 'truc'--> **ERREUR FATAL**, de fil en aiguille, ca plante de partout, le terminal génère des incantations mystiques à chaque nouvelle commande et la table n'a même pas disparue de la DB ! On panique et ... comme on débute on peux se permettre de carrément supprimer l'App entière, en effet.   
   Mais il est peut être préférable de ne pas être en sueur à chaque fois qu'on 'db:migrate' quelquechose, non ?  
   
-* Deja une Base de donnée c'est quoi ?
+* __Deja une Base de donnée c'est quoi ?__
   
   GrOsSo-MoDo --> Un fichier qui permet de stocker n'importe qu'elle sorte d'information et souvent ... en trés trés grande quantité.  
   Sauf que, c'est informations (ou données) on en a régulièrement besoin, alors si elle sont toutes là en vrac dans notre fichier ca devenir compliquer de les appeller dans nos programmes. 
   Donc une BDD, ca se structure un peux comme un tableau :  
-  colone1 | colone2 | colone3  
-  --- | --- | ---  
-  string | type | type  
-  valeur | valeur | valeur    
   
-* Il était une fois : Une **migration** c'est quoi ?  
+colone1 | colone2 | colone3  
+--- | --- | ---  
+string | type | type  
+valeur | valeur | valeur    
+  
+* __Il était une fois : Une **migration** c'est quoi ?__  
 
 ``` class Truc < ActiveRecord::Base ```  
 
 C'est une "**instance**" de class propre a la librairie de rails qui s'appelle **ActiveRecord** et qui **hérite** de touuuuuute ses **methodes** pour communiquer en **SQL** avec la **base de donnée**.  
 Ce qui signifie que quand on saisie des paramèttres dans notre méthode 'create_table'(db/migrates/) par exemple, ces paramèttres vont être **traduit par les attribut de ActiveRecord** en langage **SQL**(apparement les bases de données ne comprènenent pas les clicks droits) et aprés, magie, on va lire dans des forums "Rails c'est trop bien, on peux dialoguer avec les BDD sans une seule ligne de SQL". Et ben en fait, des lignes SQL, il y en a, même plein, sauf que c'est pas nous qui les codons.  C'est le framework* Rails 
 
-* Une **migration** ca sert à quoi ?  
+* __Une **migration** ca sert à quoi ?__  
 
 Ca sert à envoyer des instructions structurales (qui modifient sa structure) à la base de donnée. Par exemple "**supprimer une table**" c'est une instruction qui modifie la structure de la BDD puisqu'on lui retire un élément.  
 J'aime bien me représenter le fonctionnement des migrations comme des lettres que j'enverais à un chef de chantier si j'étais une riche propriétaire de plusieurs complexes hoteliers.  
