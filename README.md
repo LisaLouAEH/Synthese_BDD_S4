@@ -35,21 +35,19 @@ valeur | valeur | valeur
    
     ```rails g migration create_hostel_tahiti  ```  
     
-   Comme je ne sais pas parler tahitien, j'engage un traducteur qui s'appelle 'Activo-recordo' pour traduire la lettre suivante :
-
+  Comme je ne sais pas parler tahitien, j'engage un traducteur qui s'appelle 'Activo-recordo' pour traduire la lettre suivante :
 ```
- create_hostel :bora_bora
+create_hostel :bora_bora
     --> Je veux 1 piscine , de type 'a debordement', options : jacuzzi
   end
-```  
-  
+  ```
   Evidement le chef de chantier pendant que je lui écrit, il est au courant de rien. Il me faut a présent poster mon courrier :  
     
   ```rails db:migrate```  
-    
-   C'est un courrier super sonique, il arrive trés vite, et le chantier commence aussitot.  
-   En fait j'ai changé d'avis, je veux aussi un espace de meditation pour chien dans mon hotel parceque mon detestable chiwawa, dont je ne m'occupe même pas, n'aurait pas les chakras allignés en ce moment. J'en profiterais bien pour l'emmener en vacance. Zut le courrier traduit est déja parti !!
-   Pas de panique ! On va quand même pas **detruire l'hotel entier** à cause de cela. Il me suffit d'envoyer un autre courrier super sonique avec mes nouvelles instructions :  
+  
+  C'est un courrier super sonique, il arrive trés vite, et le chantier commence aussitot.  
+  En fait j'ai changé d'avis, je veux aussi un espace de meditation pour chien dans mon hotel parceque mon detestable chiwawa,      dont je ne m'occupe même pas, n'aurait pas les chakras allignés en ce moment. J'en profiterais bien pour l'emmener en vacance. Zut le courrier traduit est déja parti !!
+  Pas de panique ! On va quand même pas **detruire l'hotel entier** en faisant un **db:rollback** à cause de cela. Il me suffit d'envoyer un autre courrier super sonique avec mes nouvelles instructions :  
    
   ```rails g migration add_place_dog_meditation```  
   etc..  
