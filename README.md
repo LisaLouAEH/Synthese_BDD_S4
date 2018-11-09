@@ -8,8 +8,20 @@
   
   Intuitivement on se dirige vers notre éditeur préféré (celui qui mets des couleurs partout dans notre code), click droit, effacer le fichier de migration qui contient la trace de notre table 'truc'--> **ERREUR FATAL**, de fil en aiguille, ca plante de partout, le terminal génère des incantations mystiques à chaque nouvelle commande et la table n'a même pas disparue de la DB ! On panique et ... comme on débute on peux se permettre de carrément supprimer l'App entière, en effet.   
   Mais il est peut être préférable de ne pas être en sueur à chaque fois qu'on 'db:migrate' quelquechose, non ?  
+  
+* Deja une Base de donnée c'est quoi ?
+  
+  GrOsSo-MoDo --> Un fichier qui permet de stocker n'importe qu'elle sorte d'information et souvent ... en trés trés grande quantité.  
+  Sauf que, c'est informations (ou données) on en a régulièrement besoin, alors si elle sont toutes là en vrac dans notre fichier ca devenir compliquer de les appeller dans nos programmes. 
+  * Donc une BDD, ca se structure un peux comme un tableau : 
+  |---|
+  Nom de la table 
+  Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3  
 
-* Une **migration** c'est quoi ?  
+* Il était une fois : Une **migration** c'est quoi ?  
 
 ``` class Truc < ActiveRecord::Base ```  
 
@@ -40,8 +52,14 @@ Pas de panique ! On va quand même pas **detruire l'hotel entier** à cause de c
   ```rails g migration add_place_dog_meditation```  
 etc..
 
-## Quelques méthodes pratico-gogo de migration
-
+## Quelques méthodes pratico-gogo de migration  
+  
+## Step-by-Step Model et BDD  
+  
+## Le Roll-back, Magie ? ou piege ?  
+  
+## Tester la BDD  
+  
 ## Générer et modifier notre BDD
 
 Voici les règles concernant les noms des tables et colonnes :
