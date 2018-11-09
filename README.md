@@ -15,9 +15,9 @@
   Sauf que, c'est informations (ou données) on en a régulièrement besoin, alors si elle sont toutes là en vrac dans notre fichier ca devenir compliquer de les appeller dans nos programmes. 
   * Donc une BDD, ca se structure un peux comme un tableau :  
   colone1 | colone2 | colone3
---- | --- | ---
-string | type | type
-valeur | valeur | valeur  
+  --- | --- | ---
+  string | type | type
+  valeur | valeur | valeur  
   
 * Il était une fois : Une **migration** c'est quoi ?  
 
